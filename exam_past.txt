@@ -1,0 +1,1172 @@
+                                                     Bruna Alexandre <bruna.alexandre@sou.inteli.edu.br>
+
+
+
+ES - PROVA REGULAR - Módulo 10 - 20251BT09 - 18/06/2025
+Formulários Google <forms-receipts-noreply@google.com>                       18 de junho de 2025 às 09:21
+Para: bruna.alexandre@sou.inteli.edu.br
+
+
+
+
+      Agradecemos o preenchimento de ES - PROVA REGULAR -
+      Módulo 10 - 20251BT09 - 18/06/2025
+      Veja as respostas enviadas.
+
+
+          Ver pontuação
+
+
+
+
+      ES - PROVA REGULAR - Módulo 10 -
+      20251BT09 - 18/06/2025
+      A Prova é composta por duas PARTES e tem duração total de 3h00min.
+
+      23 questões objetivas (70%)
+      Questão 1: Computação
+      Questão 2: Computação
+      Questão 3: Computação
+      Questão 4: Computação
+      Questão 5: Computação
+      Questão 6: Computação
+      Questão 7: Computação
+      Questão 8: Computação
+      Questão 9: Computação
+      Questão 10: Computação
+      Questão 11: Computação
+      Questão 12: Matemática
+      Questão 13: Matemática
+      Questão 14: Matemática
+      Questão 15: Matemática
+      Questão 16: Negócios
+Questão 17: Negócios
+Questão 18: Negócios
+Questão 19: UX
+Questão 20: UX
+Questão 21: UX
+Questão 22: Liderança
+Questão 23: Liderança
+
+2 questões discursivas (30%)
+Questão 1: Computação
+Questão 2: Computação
+
+Antes de enviar, recomendamos que você copie as respostas das suas questões discursivas
+para um arquivo de texto em seu computador e o salve como backup para o caso de
+ocorrerem falhas de envio (tendo o backup e ocorrendo uma falha você pode copiar do backup
+para o Google Forms e enviar as respostas novamente).
+
+Boa Prova !
+
+Seu e-mail (bruna.alexandre@sou.inteli.edu.br) foi registrado quando você enviou este
+formulário.
+
+
+
+
+NOME: *
+
+
+Bruna Brasil Alexandre
+
+
+
+
+QUESTÕES OBJETIVAS
+
+
+
+Questão Objetiva 1 – Computação
+
+A integração contínua (IC) é uma prática de desenvolvimento de software onde
+membros de uma equipe integram seu trabalho frequentemente, geralmente cada
+pessoa integra pelo menos diariamente — levando a múltiplas integrações por
+dia. Cada integração é verificada por um build automatizado (incluindo testes)
+para detectar erros de integração o mais rápido possível. Este conceito está
+intimamente ligado ao Application Lifecycle Management (ALM), que abrange a
+coordenação de desenvolvimento, operações e manutenção de software ao longo
+de todo o seu ciclo de vida.
+
+Considerando as descrições fornecidas sobre integração contínua e Application
+Lifecycle Management, avalie as seguintes afirmações e identifique a correta.
+
+*
+
+     (A) A integração contínua elimina a necessidade de gestão do ciclo de vida das aplicações,
+     pois automatiza todas as fases de desenvolvimento.
+
+
+     (B) O ALM é uma abordagem que não se relaciona com a integração contínua, focando
+     exclusivamente na manutenção do software após seu lançamento.
+
+
+     (C) A integração contínua é uma prática que facilita o gerenciamento do ciclo de vida das
+     aplicações ao permitir detecções rápidas de erros e automatizando os testes.
+
+
+     (D) O Application Lifecycle Management inclui a integração contínua como uma de suas fases
+     finais, dedicando-se à entrega contínua e ao deployment.
+
+
+     (E) A integração contínua substitui completamente os testes manuais, tornando-os obsoletos
+     no processo de desenvolvimento de software.
+
+
+
+
+Questão Objetiva 2 – Computação
+
+Uma empresa de streaming educacional online recebe milhares de requisições
+simultâneas para suas aulas ao vivo e precisa encaminhar cada requisição ao
+servidor mais adequado com base em parâmetros presentes na URL (por
+exemplo, o código do curso ou da turma). Para isso, foi implantado um
+balanceador de carga capaz de inspecionar o conteúdo das requisições HTTP.
+
+Em qual camada do modelo OSI esse balanceador deve operar para realizar o
+roteamento baseado em parâmetros da URL e por quê?
+
+*
+
+     A) Camada de Enlace (L2) – opera sobre endereços MAC, não consegue ler cabeçalhos ou
+     parâmetros de URL.
+
+
+     B) Camada de Rede (L3) – faz roteamento por IP, sem inspeção de dados de aplicação.
+
+
+     C) Camada de Transporte (L4) – trabalha com portas TCP/UDP, sem interpretar o conteúdo
+     HTTP.
+
+
+     D) Camada de Sessão (L5) – gerência controle de diálogo, mas não acessa campos HTTP.
+
+
+     E) Camada de Aplicação (L7) – inspeciona cabeçalhos e payload HTTP, incluindo caminhos e
+     parâmetros de URL, permitindo roteamento granular.
+
+
+
+
+Questão Objetiva 3 – Computação
+
+Uma fintech lançou um novo aplicativo de pagamentos e quer validar o
+comportamento do sistema quando o número de usuários aumenta gradualmente
+até atingir 50 000 transações simultâneas, identificando em que ponto ocorrem
+falhas ou degradação de desempenho.
+
+Qual tipo de teste deve ser aplicado para simular esse ramp-up de acessos e
+verificar a robustez do sistema sob tráfego extremo?
+
+*
+
+     A) Teste de Unidade – verifica funcionalidades isoladas do código, sem simular múltiplos
+     usuários.
+
+
+     B) Teste de Integração – confirma que diferentes módulos se comunicam corretamente, mas
+     não impõe carga real de usuários.
+
+
+     C) Teste de Carga – avalia o sistema sob condições de uso previstas, porém não leva o
+     sistema além dos limites esperados.
+
+
+     D) Teste de Stress – aumenta progressivamente a carga até ultrapassar a capacidade do
+     sistema, identificando o ponto de quebra.
+
+
+     E) Teste de Usabilidade – foca na experiência do usuário e navegabilidade, sem gerar tráfego
+     intenso.
+
+
+
+
+Questão Objetiva 4 – Computação
+
+Considere que você foi designado como arquiteto de software em uma empresa
+de logística que está desenvolvendo um sistema de rastreamento de frotas. Seu
+desafio é criar a documentação arquitetural de forma clara, permitindo que
+desenvolvedores, operações e stakeholders externos entendam como as partes
+do sistema se relacionam — desde a execução de serviços até a integração com
+sistemas terceiros. Para isso, você decide aplicar o Modelo C4 em quatro níveis
+de detalhamento.
+
+Como arquiteto ativo nessa tarefa, em qual nível do Modelo C4 você deve
+trabalhar para definir aplicações, bancos de dados e componentes de
+infraestrutura que compõem o sistema e como eles se comunicam entre si?
+
+*
+
+         A) Nível 1 – Diagrama de Contexto – mostra o sistema como uma caixa única e suas
+         interações externas, sem detalhar containers internos.
+
+
+         B) Nível 2 – Diagrama de Contêineres – mapeia cada aplicação, banco de dados e
+         infraestrutura como “contêineres” separados, esclarecendo responsabilidades, tecnologias e
+         padrões de comunicação.
+
+
+         C) Nível 3 – Diagrama de Componentes – aprofunda-se nos módulos internos de um
+         contêiner, detalhando serviços e bibliotecas.
+
+
+         D) Nível 4 – Diagrama de Código – foca em classes, interfaces e detalhes de implementação
+         dentro de componentes.
+
+
+         E) O Modelo C4 não é adequado para sistemas de rastreamento de frotas – incorreto, pois o
+         C4 é amplamente aplicável a diversos domínios.
+
+
+
+
+Questão Objetiva 5 – Computação
+
+Você é responsável pela segurança de um projeto cujo código-fonte está
+hospedado num repositório público no GitHub. Durante uma auditoria de rotina,
+percebeu-se que um desenvolvedor acidentalmente realizou o commit de um
+arquivo contendo uma chave SSH com privilégios administrativos. Essa chave
+permite acesso irrestrito aos servidores de produção. Para evitar que isso volte a
+acontecer, é necessário adotar práticas de segurança na pipeline de CI/CD que
+detectem e previnam a exposição de segredos no código.
+
+Com base nesse cenário, identifique corretamente:
+
+    1.    O tipo de análise de segurança que inspeciona o código-fonte em busca de
+segredos antes do deploy.
+
+    2.    A ferramenta indicada para detectar chaves, tokens e credenciais em
+repositórios Git (pode ser integrada como hook ou em CI).
+
+    3.    O maior impacto caso esse problema não seja detectado a tempo.
+
+*
+         A) DAST + OWASP ZAP + descoberta de vulnerabilidades em APIs em tempo de execução.
+
+
+         B) IAST + Contrast Security + monitoramento de chamadas internas, sem prevenção de
+         exposição de segredos em repositório.
+
+
+         C) SAST + truffleHog + comprometimento imediato de credenciais administrativas, permitindo
+         invasão e controle total da infraestrutura.
+
+
+         D) RASP + AppSensor + mitigação de ataques em runtime, sem abordar o vazamento de
+         chaves no código.
+
+
+         E) SCA + SonarQube + a
+
+
+
+
+Questão Objetiva 6 – Computação
+
+Você é arquiteto de software em uma empresa que está desenvolvendo um
+marketplace modular, com componentes como catálogo de produtos, pagamento
+e notificações. Na esteira de CI/CD, há duas fases de testes:
+
+    1.    Testes de unidade, nos quais cada módulo deve ser testado isoladamente
+com mocks ou stubs para serviços externos (por exemplo, gateway de
+pagamento).
+
+    2.    Testes de integração, nos quais os módulos são executados em conjunto,
+porém alternando implementações reais e simuladas conforme o ambiente
+(homologação, desenvolvimento, produção).
+
+Para permitir que componentes de alto nível (como o módulo de checkout) não
+dependam diretamente de implementações concretas (por exemplo, a classe
+StripePaymentService), mas sim de abstrações, facilitando a injeção de mocks
+nos testes, qual princípio SOLID deve ser aplicado?
+
+*
+
+         A) Princípio da Inversão de Dependência (DIP) – módulos de alto nível e baixo nível
+         dependem de abstrações, não de implementações; permite trocar facilmente a
+         implementação concreta em testes.
+
+
+         B) Princípio da Substituição de Liskov (LSP) – subclasses devem poder substituir suas
+         superclasses sem alterar o comportamento esperado.
+
+
+         C) Princípio da Responsabilidade Única (SRP) – cada classe deve ter apenas um motivo para
+         mudar.
+     D) Princípio da Segregação de Interfaces (ISP) – criar interfaces específicas para cada
+     cliente, evitando métodos desnecessários.
+
+
+     E) Princípio do Aberto/Fechado (OCP) – classes devem estar abertas para extensão mas
+     fechadas para modificação.
+
+
+
+
+Questão Objetiva 7 – Computação
+
+Você foi designado como arquiteto de software em uma empresa de logística que
+está construindo um serviço de cálculo de frete modular para suportar múltiplas
+transportadoras. Para garantir que o serviço principal não dependa de
+implementações concretas — facilitando tanto os testes de unidade (com mocks)
+quanto os testes de integração (com instâncias reais ou simuladas) na esteira de
+CI/CD — foi adotada Injeção de Dependência (DI).
+
+I. A Injeção de Dependência permite substituir implementações de cálculo de frete
+(diferentes transportadoras) sem modificar a classe principal do serviço.
+
+PORQUE
+
+II. A Injeção de Dependência exige que todas as transportadoras implementem
+obrigatoriamente a mesma classe base, o que reduz a flexibilidade de
+implementação.
+
+A respeito dessas asserções, assinale a opção correta:
+
+*
+
+     A) As duas asserções são proposições verdadeiras, e a segunda é uma justificativa correta
+     da primeira.
+
+
+     B) As duas asserções são proposições verdadeiras, mas a segunda não é uma justificativa
+     correta da primeira.
+
+
+     C) A primeira asserção é uma proposição verdadeira, e a segunda, uma proposição falsa.
+
+
+     D) A primeira asserção é uma proposição falsa, e a segunda, uma proposição verdadeira.
+
+
+     E) Tanto a primeira quanto a segunda asserções são proposições falsas.
+
+
+
+
+Questão Objetiva 8 – Computação
+Uma startup está desenvolvendo um chatbot baseado em IA que utiliza Git para
+controlar o versionamento do código. Para organizar o trabalho em equipe, a
+equipe adota práticas de fluxo de trabalho com branches, commits e pull requests.
+
+I. Criar uma branch feature/<nome> para cada nova funcionalidade isola
+alterações pendentes sem afetar o código principal.
+
+II. Utilizar mensagens de commit genéricas, como “ajustes”, facilita o
+rastreamento histórico de mudanças.
+
+III. Submeter um pull request e aguardar revisão de código antes de mesclar a
+branch de feature na develop ou main melhora a qualidade e segurança do
+código.
+
+IV. Rebasear frequentemente a branch main sobre a feature antes de cada
+commit previne conflitos e confere histórico linear.
+
+V. Usar tags anotadas (annotated tags) para marcar cada versão liberada e
+registrar metadados importantes para auditoria e rollback.
+
+É correto o que se afirma em
+
+*
+
+     A) I, III e V.
+
+
+     B) II e IV.
+
+
+     C) I e II.
+
+
+     D) III, IV e V.
+
+
+     E) I, II e III.
+
+
+
+
+QUESTÃO OBJETIVA 9 - COMPUTAÇÃO
+
+Uma empresa de tecnologia está desenvolvendo um novo aplicativo de gestão
+financeira utilizando Engenharia Simultânea. As equipes de backend, frontend e
+banco de dados estão trabalhando em paralelo para acelerar o desenvolvimento.
+Para minimizar erros na integração e garantir a qualidade do produto, a empresa
+precisa adotar estratégias eficazes de mitigação de falhas.
+A partir desse cenário, considere as seguintes afirmações sobre as estratégias
+para mitigar erros no desenvolvimento paralelo:
+
+I - A adoção de testes automatizados de integração permite detectar rapidamente
+falhas na comunicação entre backend e frontend, reduzindo o risco de problemas
+apenas serem descobertos na fase final de testes.
+
+II - Como as equipes já estabeleceram os contratos entre os serviços, os testes
+de integração tornam-se desnecessários, pois cada time pode focar na
+implementação interna sem risco de impacto nos outros módulos.
+
+III - Para evitar conflitos entre backend e banco de dados, a melhor abordagem é
+que a equipe do banco finalize toda a estrutura de dados antes que o backend
+possa começar a implementação das regras de negócio, garantindo
+compatibilidade total desde o início.
+
+Com base na Engenharia Simultânea e nas estratégias para mitigação de erros
+no desenvolvimento paralelo, assinale a alternativa correta:
+
+*
+
+     A) Apenas I
+
+
+     B) Apenas I e II
+
+
+     C) Apenas I e III
+
+
+     D) Apenas II e III
+
+
+     E) I, II e III
+
+
+
+
+QUESTÃO OBJETIVA 10 - COMPUTAÇÃO
+
+Uma empresa está desenvolvendo um sistema de e-commerce aplicando a
+Engenharia Simultânea, onde o frontend e o backend estão sendo construídos em
+paralelo. Durante o processo, mudanças solicitadas pelo cliente geram impactos
+no contrato entre as partes, exigindo decisões estratégicas para evitar problemas
+de integração e manter a estabilidade do sistema.
+
+A partir desse cenário, considere as seguintes afirmações sobre as decisões que
+devem ser tomadas quando há impactos nos contratos entre frontend e backend:
+I - Quando um campo da interface precisa ser alterado e isso impacta o contrato
+da API, o backend deve primeiro disponibilizar a nova versão com suporte a
+ambas as estruturas antes de descontinuar a versão anterior, evitando que o
+frontend fique temporariamente incompatível.
+
+II - Se uma mudança solicitada pelo cliente impacta tanto o frontend quanto o
+backend, a melhor abordagem é implementar as modificações no backend
+primeiro e somente depois atualizar o frontend, garantindo que o sistema continue
+operável durante a transição.
+
+III - Caso o cliente solicite novas funcionalidades que alteram contratos já
+estabelecidos e impactem código que estava funcionando nos dois lados, é
+recomendável adotar uma abordagem baseada em versionamento da API para
+evitar regressões e manter compatibilidade com integrações existentes.
+
+Com base na Engenharia Simultânea e nas decisões sobre impactos em
+contratos de software, assinale a alternativa correta:
+
+*
+
+     A) Apenas I
+
+
+     B) Apenas II
+
+
+     C) Apenas I e III
+
+
+     D) Apenas II e III
+
+
+     E) I, II e III
+
+
+
+
+QUESTÃO OBJETIVA 11 - COMPUTAÇÃO
+
+Uma empresa de tecnologia está desenvolvendo um novo aplicativo de gestão
+financeira utilizando Engenharia Simultânea: as equipes de backend, frontend e
+banco de dados trabalham em paralelo para acelerar a entrega. Para minimizar
+falhas em produção e garantir a qualidade durante o deploy de novas versões,
+decide-se adotar uma estratégia de implantação que permita testar incrementos
+de forma controlada, revertendo rapidamente em caso de problemas.
+
+Qual estratégia de deploy melhor atende a esse objetivo e por quê?
+*
+
+     A) Blue/Green Deployment – mantém dois ambientes completos (azul e verde) e alterna todo
+     o tráfego de uma só vez, permitindo rollback rápido, mas sem testar incrementos em um
+     subconjunto de usuários.
+
+
+     B) Canary Deployment – libera a nova versão para uma pequena fração de servidores ou
+     usuários, monitora métricas de desempenho e erros, e só então expande gradualmente para
+     todo o ambiente, reduzindo o impacto de possíveis falhas.
+
+
+     C) Rolling Update – substitui instâncias antigas pelas novas em lotes sequenciais, evitando
+     downtime, mas sem segmentar usuários para teste prévio da nova versão.
+
+
+     D) A/B Deployment – divide tráfego simultâneo entre duas versões para testes de
+     usabilidade, mas não foca em detecção de erros críticos de infraestrutura ou integração.
+
+
+     E) Immutable Infrastructure – reprovisiona toda a infraestrutura para cada release, garantindo
+     consistência, porém sem controlar exposição gradual de novas funcionalidades.
+
+
+
+
+QUESTÃO OBJETIVA 12 - MATEMÁTICA
+
+No desenvolvimento de sistemas distribuídos, é comum utilizar grafos para
+modelar a comunicação entre processos. Considere um sistema em que os
+processos são representados como vértices e as mensagens trocadas entre eles
+como arestas.
+
+Qual das alternativas abaixo representa corretamente uma vantagem do uso de
+grafos nesse contexto?
+
+*
+
+     A) Reduz o tempo de compilação do sistema.
+
+
+     B) Garante a integridade dos dados transmitidos.
+
+
+     C) Elimina automaticamente falhas de hardware.
+
+
+     D) Permite identificar gargalos de comunicação e otimizar o desempenho do sistema.
+
+
+     E) Substitui a necessidade de testes de carga e desempenho.
+QUESTÃO OBJETIVA 13 - MATEMÁTICA
+
+Durante a modelagem de um sistema distribuído, um engenheiro de software
+deseja identificar o melhor tipo de grafo para representar as conexões entre os
+nós de processamento e otimizar a navegação por essas conexões. Ele considera
+as propriedades dos caminhos e circuitos em grafos.
+
+Analise as afirmações a seguir:
+
+I. Um grafo Euleriano permite percorrer todas as arestas do grafo exatamente
+uma vez, e isso é útil para tarefas como inspeção de rodovias ou monitoramento
+de redes.
+II. Um grafo Hamiltoniano é ideal quando se deseja visitar todos os vértices
+apenas uma vez, sendo esse tipo de caminho frequentemente associado ao
+problema do Caixeiro Viajante.
+III. Um grafo será sempre Hamiltoniano se todos os seus vértices tiverem grau
+par e o grafo for conexo.
+
+Assinale a alternativa correta:
+
+*
+
+     A) Apenas I está correta.
+
+
+     B) Apenas II está correta.
+
+
+     C) Apenas III está correta.
+
+
+     D) Apenas I e II estão corretas.
+
+
+     E) Apenas II e III estão corretas.
+
+
+
+
+QUESTÃO OBJETIVA 14 - MATEMÁTICA
+
+Uma empresa de tecnologia está desenvolvendo um sistema de monitoramento
+de dados entre cinco servidores, identificados como A, B, C, D e E. A
+comunicação entre eles é representada em um grafo direcionado, onde uma
+aresta do servidor X para o servidor Y indica que X envia dados diretamente para
+Y.
+
+A equipe técnica deseja construir a matriz de adjacência para representar essas
+conexões, utilizando 1 para indicar a existência de uma comunicação direta de
+um servidor para outro, e 0 caso contrário.
+
+Questão:
+
+Considerando o grafo direcionado representando a comunicação entre os
+servidores A, B, C, D e E, qual das alternativas representa corretamente a linha
+correspondente ao vértice A na matriz de adjacência?
+
+
+
+*
+
+
+
+
+     A) [1, 0, 1, 0, 1]
+
+
+     B) [0, 1, 1, 0, 0]
+
+
+     C) [1, 1, 0, 0, 1]
+
+
+     D) [0, 0, 0, 1, 1]
+
+
+     E) [1, 1, 1, 1, 1]
+
+
+
+
+QUESTÃO OBJETIVA 15 - MATEMÁTICA
+
+Uma empresa precisa agendar tarefas de manutenção em seus servidores de
+forma que nenhum par de servidores que compartilha dados entre si esteja em
+manutenção no mesmo dia, pois isso comprometeria a integridade do sistema.
+
+A tabela abaixo mostra os conflitos entre os servidores: um "X" indica que os dois
+servidores trocam dados e, portanto, não podem ser desligados no mesmo dia
+para manutenção.
+
+Qual é o menor número de dias necessário para agendar a manutenção de todos
+os servidores, garantindo que nenhum par de servidores com conflito seja
+mantido no mesmo dia?
+
+*
+
+
+
+
+     A) 2
+
+
+     B) 3
+
+
+     C) 4
+
+
+     D) 5
+
+
+     E) 6
+
+
+
+
+QUESTÃO OBJETIVA 16 - NEGÓCIOS
+
+A integração entre sistemas ERP (Enterprise Resource Planning) e CRM
+(Customer Relationship Management) tem se tornado cada vez mais relevante
+em ambientes empresariais orientados por dados. Ao unificar os fluxos de
+informação entre o front-office (relacionamento com o cliente) e o back-office
+(operações internas), as empresas obtêm ganhos em eficiência, assertividade
+comercial e qualidade na experiência do cliente.
+
+Contudo, para que essa integração seja efetiva, ela deve ocorrer em pontos
+estratégicos dos processos organizacionais, com especial atenção à
+coerência dos dados mestres, sincronização de eventos e
+interoperabilidade sistêmica.
+
+Com base no contexto acima e nos conhecimentos sobre arquitetura de
+sistemas corporativos, analise as afirmações a seguir:
+
+I. A integração entre ERP e CRM deve ser feita preferencialmente nos pontos de
+entrada de dados mestres, como cadastro de clientes, evitando duplicidades e
+divergências entre sistemas.
+
+II. O ideal é que a integração entre CRM e ERP ocorra apenas após o fechamento
+da venda, evitando o compartilhamento prematuro de dados com setores que não
+participam diretamente do relacionamento com o cliente.
+
+III. Processos como emissão de pedidos, envio de propostas comerciais e
+geração de faturas são pontos críticos de integração entre CRM e ERP, pois
+envolvem dados compartilhados entre áreas comerciais, financeira e logística.
+
+IV. A ausência de uma camada de integração entre ERP e CRM pode ser
+compensada se cada sistema for gerenciado por equipes diferentes, evitando
+conflitos de responsabilidade.
+
+Assinale a alternativa correta:
+
+*
+
+     A) Apenas I e II estão corretas.
+
+
+     B) Apenas I e III estão corretas.
+
+
+     C) Apenas II e III estão corretas.
+
+
+     D) Apenas I, II e III estão corretas.
+
+
+     E) Apenas I, III e IV estão corretas.
+
+
+
+
+QUESTÃO OBJETIVA 17 - NEGÓCIOS
+
+Em um relatório de política econômica, um governo afirma o seguinte:
+
+“Nosso plano de crescimento se baseia na ampliação do investimento em
+infraestrutura (capital físico) e na intensificação da formalização do mercado de
+trabalho. Ao expandirmos essas duas frentes, garantiremos o crescimento
+sustentável da renda per capita e da produtividade no longo prazo.”
+
+Em uma análise técnica, um economista responde à proposta utilizando a
+seguinte equação derivada do modelo de crescimento de Solow:
+
+A equação representa a produção agregada de uma economia, em que (ver
+equação mais a frente, logo antes das opções):
+
+Y é o produto total (PIB),
+A é a produtividade total dos fatores,
+
+K é o estoque de capital,
+
+L é o fator trabalho,
+
+α\alpha é o peso do capital na produção.
+
+Com base no modelo e na crítica implícita feita pelo economista, avalie as
+afirmações a seguir:
+
+I. O modelo sugere que, embora aumentos em capital e trabalho possam elevar o
+PIB no curto prazo, esse crescimento tende a apresentar retornos marginais
+decrescentes, limitando seu efeito sobre a renda per capita no longo prazo.
+
+II. A renda per capita pode crescer indefinidamente por meio da acumulação de
+capital, desde que a taxa de investimento supere a taxa de depreciação.
+
+III. O progresso tecnológico, representado por AAA, é o principal fator capaz de
+sustentar crescimento contínuo da produtividade e da renda per capita no longo
+prazo.
+
+IV. A formalização do mercado de trabalho, ao aumentar o número de
+trabalhadores registrados, implica necessariamente em aumento de produtividade
+agregada, segundo o modelo.
+
+*
+
+
+
+
+     A) I e III, apenas.
+     B) II e IV, apenas.
+
+
+     C) I, II e III, apenas.
+
+
+     D) I, III e IV, apenas.
+
+
+     E) I, II, III e IV.
+
+
+
+
+QUESTÃO OBJETIVA 18 - NEGÓCIOS
+
+Uma startup brasileira desenvolve um aplicativo de pedidos de comida por
+delivery. A empresa presta serviços de intermediação entre restaurantes e
+consumidores via plataforma digital.
+
+Durante uma aula de planejamento tributário, um dos sócios afirma:
+
+“Como o nosso negócio é todo online e intermediamos a venda de comida,
+podemos escolher se pagamos ISS ou ICMS, dependendo da alíquota mais
+vantajosa.”
+
+Com base na legislação tributária brasileira e nos conceitos de ICMS (Imposto
+sobre Circulação de Mercadorias e Serviços) e ISS (Imposto sobre Serviços),
+analise as afirmações a seguir:
+
+I. O ICMS incide sobre a venda de mercadorias e certos serviços de transporte e
+comunicação, enquanto o ISS é aplicado sobre serviços definidos em lista anexa
+à Lei Complementar nº 116/2003.
+
+II. A intermediação realizada por plataformas digitais de serviço de entrega está
+sujeita à incidência de ISS, e não de ICMS, uma vez que o aplicativo não é o
+fornecedor direto da mercadoria.
+
+III. Empresas podem escolher entre recolher ICMS ou ISS, desde que se
+enquadrem em atividades mistas de bens e serviços.
+
+IV. O ICMS é um imposto municipal, e o ISS é estadual, devendo a empresa
+verificar a legislação local para definir a alíquota correta a ser aplicada.
+
+É correto o que se afirma em: *
+
+     A) I e II, apenas.
+     B) I e III, apenas.
+
+
+     C) I, II e IV, apenas.
+
+
+     D) II, III e IV, apenas.
+
+
+     E) I, II, III e IV.
+
+
+
+
+QUESTÃO OBJETIVA 19 - UX – Engenharia de Serviços e Modelagem de
+Processos
+
+Conteúdo da Semana 2
+
+Contextualização:
+No contexto do design de serviços, Lynn Shostack propõe o uso de blueprints
+como ferramenta para mapear, padronizar e controlar a execução de serviços. A
+identificação prévia de pontos de falha permite o desenvolvimento de soluções
+preventivas, elevando a confiabilidade e a qualidade percebida pelo consumidor.
+
+Enunciado da Questão:
+Considerando o processo de sistematização do design de serviços, avalie as
+asserções a seguir.
+
+I. O uso de blueprints no desenvolvimento de serviços permite reduzir falhas
+operacionais e melhorar a experiência do cliente.
+PORQUE
+II. Os blueprints são utilizados apenas na fase final de prestação do serviço,
+quando o atendimento ao cliente já está em curso.
+
+A respeito dessas asserções, assinale a opção correta:
+
+*
+
+     a. ( ) As asserções I e II são proposições verdadeiras, e a II é uma justificativa da I.
+
+
+     b. ( ) As asserções I e II são proposições verdadeiras, mas a II não é uma justificativa da I.
+
+
+     c. ( ) A asserção I é uma proposição verdadeira, e a II é uma proposição falsa.
+
+
+     d. ( ) A asserção I é uma proposição falsa, e a II é uma proposição verdadeira.
+     e. ( ) As asserções I e II são proposições falsas.
+
+
+
+
+QUESTÃO OBJETIVA 20 - UX - Design System e Design Ops
+
+
+Conteúdo da Semana 5
+
+Contextualização:
+ Em um ambiente de desenvolvimento digital, o papel dos sistemas de design tem
+se tornado cada vez mais relevante. Tais sistemas organizam componentes
+reutilizáveis e diretrizes de estilo, promovendo consistência visual e eficiência. No
+entanto, apenas sua existência não garante sua adoção e uso eficaz pelas
+equipes. Nesse sentido, a prática de Design Ops emerge como uma abordagem
+estratégica para superar os desafios culturais e operacionais relacionados à
+implementação desses sistemas.
+
+Enunciado da questão:
+Considerando os aspectos discutidos sobre Design Ops e sua relação com
+sistemas de design, analise as afirmativas a seguir:
+
+( ) Design Ops, quando entendido como prática, está diretamente relacionado à
+adoção de sistemas de design dentro de uma organização.
+( ) Enquanto os desafios de um sistema de design são primariamente culturais,
+os desafios de Design Ops são técnicos.
+( ) A criação de um cargo dedicado a Design Ops pode mitigar sobrecargas de
+designers, otimizando processos internos.
+( ) A definição de Design Ops restringe-se ao gerenciamento de ferramentas e
+infraestrutura física para designers.
+
+Comando da questão:
+ Considere as afirmativas propostas e assinale a opção que apresenta a
+sequência de respostas corretas, de cima para baixo.
+
+*
+
+     (A) V – F – V – F
+
+
+     (B) V – V – F – F
+
+
+     (C) F – F – V – V
+      (D) V – F – F – V
+
+
+      (E) F – V – V – F
+
+
+
+
+QUESTÃO OBJETIVA 21 - UX - Mensuração e triangulação em DesignOps
+com REACH
+
+
+Conteúdo da Semana 08
+
+No contexto de equipes de DesignOps, uma das maiores dificuldades enfrentadas
+é a comprovação do impacto de suas ações, devido à dificuldade de isolar
+variáveis e à escassez de dados estatisticamente significativos. Para contornar
+esse desafio, o artigo propõe o uso do framework REACH, que organiza as
+métricas em cinco categorias principais, permitindo a triangulação de dados.
+
+Com base no texto estudado, associe as colunas relacionando os elementos do
+framework REACH às suas respectivas perguntas orientadoras para definição de
+métricas.
+
+Coluna 1 – Elementos do framework REACH
+
+1.Results
+
+
+
+2.Efficiency
+
+
+3.Ability
+
+
+4.Clarity
+
+
+5.Health
+
+Coluna 2 – Perguntas orientadoras
+
+( ) A equipe de design se sente satisfeita com seu trabalho e motivada a contribuir
+a longo prazo?
+( ) O time de design consegue focar em tarefas de alto valor ou está
+sobrecarregado com questões operacionais?
+( ) Há uma visão compartilhada sobre o papel do design dentro da organização?
+( ) O time de design possui as competências necessárias para entregar valor de
+forma consistente?
+( ) Os entregáveis e a experiência do produto melhoraram com a atuação de
+DesignOps?
+
+*
+
+     A. 5, 2, 4, 3, 1
+
+
+     B. 5, 3, 2, 4, 1
+
+
+     C. 4, 2, 1, 3, 5
+
+
+     D. 2, 1, 4, 5, 3
+
+
+     E. 3, 5, 2, 1, 4
+
+
+
+
+QUESTÃO OBJETIVA 22 - LIDERANÇA
+
+Mariana, líder de TI em uma empresa tradicional, precisa convencer sua equipe
+de desenvolvedores e administradores de sistema a implementar DevOps, que
+exigirá novas ferramentas, mudança de processos e maior colaboração entre
+times. Durante uma reunião, ela decide adotar a seguinte estratégia: Mostra um
+case de sucesso de um concorrente que reduziu deploys de 2 semanas para 2
+horas após a adoção de DevOps, com depoimentos emocionantes de equipes
+que se sentiram mais valorizadas; oferece cursos certificados e um "Dia de
+Hackathon" para a equipe testar e participar da estratégia de implementação; e
+afirma, ao final: "Sei que alguns têm receio, mas confio na capacidade de
+adaptação de vocês – e o CEO já aprovou o orçamento para essa
+transformação".
+
+Analise o comportamento de Mariana e assinale a alternativa que apresenta
+corretamente as táticas de influência adotadas por ela:
+
+*
+
+     a) Apelos Inspiradores, Colaboração e Bajulação (ingratiation)
+
+
+     b) Persuasão Racional, Consulta e Táticas de Legitimação
+     c) Apelos Inspiradores, Colaboração e Táticas de Legitimação
+
+
+     d) Bajulação (ingratiation), Consulta e Pressão
+
+
+     e) Persuasão Racional, Esclarecimento de Benefícios Pessoais e Táticas de Coalizão
+
+
+
+
+QUESTÃO OBJETIVA 23 - LIDERANÇA
+
+Carlos é gerente de uma equipe de desenvolvimento que resiste a adotar pair
+programming (programação em pares), alegando perda de produtividade. Ele
+quer convencê-los a testar a prática por 1 mês, mas sabe que:
+
+- A equipe valoriza autonomia e teme microgerenciamento;
+
+- Alguns membros são mais experientes e relutam em "ensinar" outros;
+
+- Dados de outras empresas mostram ganhos de qualidade (menos bugs), mas
+não há métricas locais.
+
+Diante desse desafio, qual tática de influência Carlos deve usar para conseguir
+maior adesão e menor resistência?
+
+*
+
+     a) Persuasão Racional
+
+
+     b) Troca
+
+
+     c) Colaboração
+
+
+     d) Táticas de Legitimação
+
+
+     e) Pressão
+
+
+
+
+QUESTÕES DISCURSIVAS
+
+
+
+
+Questão Discursiva 1 - Computação
+A FinServe, empresa de soluções financeiras em nuvem, tem buscado acelerar
+suas entregas por meio de pipelines de CI/CD, mas começou a notar
+comportamentos indesejados que colocam em risco a estabilidade e a confiança
+no processo de deploy. Entre os sintomas observados estão:
+
+Builds que “quebram” de formas diferentes em branches variadas, exigindo
+retrabalho manual para alinhar versões;
+
+Ambientes de homologação onde configurações divergem dos repositórios
+declarativos, gerando “bugs de ambiente” que só aparecem após ajustes
+manuais;
+
+Deploys que ainda provocam breves indisponibilidades em produção ou erros
+intermitentes entre microsserviços;
+
+Dificuldade em rastrear qual artefato válido passou pelos testes antes de chegar
+ao ar, impedindo reverter com segurança para uma versão comprovadamente
+estável.
+
+Em até cinco parágrafos, faça o seguinte:
+
+1.   A partir do cenário acima, identifique quais práticas ou etapas do pipeline de
+CI/CD estão falhando (por exemplo, controle de versão de infraestrutura,
+automação de testes, deploy sem downtime, rastreabilidade de artefatos).
+
+2.   Proponha melhorias de processo e seleção de ferramentas (por exemplo,
+pipelines como código, testes paralelos, configurações imutáveis, deploy blue-
+green ou canary, versionamento de artefatos) que corrijam cada fragilidade.
+
+3.   Explique como seu plano restabelecerá consistência entre ambientes,
+reduzirá intervenções manuais e garantirá entregas contínuas e auditáveis, sem
+comprometer a disponibilidade do serviço.
+
+
+
+*
+
+Nesse cenário, a empresa ficticia FinServe possui alguns problemas relacionados a algumas
+práticas falhando que, para mim, indicam falhas também nos principios do CI/CD, entre elas:
+1. Controle de versão de infraestrutura: Configurações manuais em homologação causam
+"bugs de ambiente".
+2. Automação de testes: Builds quebrados em branches diferentes revelam falta de testes
+paralelos e eficazes.
+3. Estratégia de deploy: Indisponibilidades em produção sugerem ausência de técnicas como
+blue-green ou canary.
+4. Rastreabilidade: Dificuldade em identificar artefatos estáveis reflete falta de versionamento
+imutável.
+Para contornar essa situação e corrigir as fragilidades indicadas acima, algumas boas
+práticas podem ser implementadas:
+- Infraestrutura como código (IaC): Usar Terraform (ou similares) para definir ambientes
+declarativos, sincronizados via repositórios. Essa estratégia tem como foco eliminar esses
+desvios manuais.
+- Testes paralelos em pipelines: Implementar testes de integração em containers (como o
+Docker) em todos os branches, com relatórios centralizados. Essa recomendação tem como
+enfoque reduzir o retrabalho.
+- Deploys progressivos: Adotar canary deployment (pode ser com Kubernetes), direcionando
+uma porcentagem pequena do tráfego inicialmente. Essa tática visa contornar a
+indisponibilidade.
+- Versionamento imutável: Armazenar artefatos com tags únicas, vinculando a commits e
+resultados de testes. Essa prática deve garantir um rollback seguro.
+O conjunto dessas boas práticas cria consistência no sistema, automatiza os ambientes,
+acelera os feedbacks dos testes e abre margem para a auditoria ser mais eficaz. Além disso,
+essas estratégias tem como objetivo manter a disponibilidade (devido aos deploys graduais),
+facilitar a rastreabilidade (até mesmo para reverter versões) e impulsionar a resiliência do
+processo de CI/CD.
+
+
+
+
+Questão Discursiva 2 - Computação
+
+Você foi contratado como Engenheiro DevOps na empresa Costa Coffee. A
+empresa executa milhares de vendas por toda a Europa diariamente e está
+enfrentando alguns problemas com o seu ambiente de tecnologia. Vamos a eles:
+
+
+a) Os desenvolvedores perdem muito tempo resolvendo conflitos de código e
+frequentemente perdem versões devido a merges mal feitos.
+
+b) Toda nova versão do software gera instabilidade ao ser implementada em
+produção.
+
+c) O time gasta, semanalmente, 35% do tempo de trabalho buscando por
+problemas nos softwares.
+
+d) A empresa identificou um aumento na sua conta de cloud devido a uso
+indevido de sua infraestrutura por terceiros (não autorizados).
+
+Você precisa identificar os problemas da área de desenvolvimento de sistemas e
+elaborar um plano claro e objetivo para apresentar ao seu CTO. Neste plano você
+deverá abordar processos e ferramentas que auxiliarão nesta jornada.
+    Escreva o plano em até 5 parágrafos.
+
+     *
+
+    Plano para Costa Coffee:
+    1. Com o objetivo de evitar perdas de versões e melhorar a compatibilidade entre os códigos
+    desenvolvidos (evitar conflitos), deve ser utilizada uma padronização de GitFlow, que visa a
+    implementação de um fluxo estruturado com commits alinhados ao Conventional Commits,
+    branches `feature/`, `release/` e merges obrigatórios via pull requests com revisão. Além
+    disso, também é recomendado usar rebase em vez de merge para histórico linear, e proteção
+    de branches no GitHub.
+    2. Para contornar essa instabilidade no software, seria interessante a implementação de uma
+    Pipeline CI/CD. Dessa forma, os testes automatizados devem ser criados abrangendo os
+    testes unitários e de integração em estágios de CI. Além disso, a aplicação de um deploy
+    gradual deve utilizar feature flags para liberar funcionalidades progressivamente, e canary
+    deployment no Kubernetes para reduzir instabilidade.
+    3. Os erros que gastam 35% do tempo da equipe podem ser identificados com maior
+    facilidade quando está implementada uma boa observabilidade. Neste contexto, seria
+    necessário integrar o código com alguma ferramenta para logs e Prometheus (métricas) para
+    monitorar aplicações em tempo real. Ademais, também é possível configurar alertas sobre
+    essas métricas coletadas para evitar os problemas antes que eles aconteçam.
+    4. Para melhorar a segurança e custos, é recomendado adotar gestão e bloqueio de acesso
+    (por exemplo, na AWS) com políticas de mínimo privilégio e revisões periódicas. Ademais,
+    focado na infraestrutura dos recursos, uma estratégia que poderia ser implementada é a
+    configuração de otimização recursos ociosos via AWS Budgets.
+
+
+
+
+Crie seu próprio formulário do Google.
+Este formulário parece suspeito? Relatório
+
