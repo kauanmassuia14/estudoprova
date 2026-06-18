@@ -93,6 +93,42 @@ header p {
   margin: 0 auto;
 }
 
+.version-switcher {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: -22px auto 36px;
+  padding: 6px;
+  width: fit-content;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+}
+
+.version-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  padding: 10px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  transition: var(--transition);
+}
+
+.version-btn:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.version-btn.active {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.25);
+}
+
 /* Progress Bar Sticky */
 .sticky-progress {
   position: fixed;
@@ -346,6 +382,29 @@ header p {
   background: rgba(168, 85, 247, 0.3);
 }
 
+.answer-toggle-btn {
+  background: rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  color: #dbeafe;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: var(--transition);
+  margin-top: 14px;
+}
+
+.answer-toggle-btn:hover {
+  background: rgba(99, 102, 241, 0.3);
+}
+
+.answer-toggle-btn:disabled,
+.answer-toggle-btn:disabled:hover {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 .essay-reference {
   background: rgba(168, 85, 247, 0.05);
   border: 1px solid rgba(168, 85, 247, 0.15);
@@ -356,6 +415,26 @@ header p {
   font-size: 0.9rem;
   white-space: pre-line;
   color: #e9d5ff;
+}
+
+.answer-reveal {
+  background: rgba(99, 102, 241, 0.05);
+  border: 1px solid rgba(99, 102, 241, 0.15);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  margin-top: 14px;
+  display: none;
+  font-size: 0.9rem;
+  color: #dbeafe;
+  white-space: pre-line;
+}
+
+.answer-reveal p {
+  margin-bottom: 10px;
+}
+
+.answer-reveal p:last-child {
+  margin-bottom: 0;
 }
 
 /* Action Buttons */

@@ -17,7 +17,7 @@ const examQuestions = [
       { key: "E", text: "I, II e III." }
     ],
     answer: "C",
-    explanation: "A afirmação I está incorreta (é uma pegadinha clássica): no C4 Model, um 'Container' representa qualquer unidade deployável ou executável independente (como um banco de dados, uma SPA, um aplicativo mobile ou um serviço Java/Go), não tendo relação estrita ou obrigatória com containers Docker. As afirmações II e III são verdadeiras: a ordenação do Dockerfile de menos mutável para mais mutável maximiza o cache do Docker (instalar dependências primeiro e copiar código no fim); e o multi-stage build de fato gera imagens muito menores e seguras ao omitir o SDK de desenvolvimento."
+    explanation: "Lembre assim: no C4, 'container' não quer dizer Docker; quer dizer uma parte executável do sistema, como API, banco ou app web. No Dockerfile, coloque primeiro o que muda pouco, como dependências, e depois o código, para aproveitar cache. Multi-stage é como cozinhar numa cozinha completa, mas servir o prato final sem levar panelas e ferramentas junto: a imagem final fica menor e mais segura."
   },
   {
     id: 2,
@@ -37,7 +37,7 @@ const examQuestions = [
       { key: "E", text: "Ambas as asserções são proposições falsas." }
     ],
     answer: "D",
-    explanation: "A asserção I é falsa porque os hooks client-side (locais) NÃO são clonados pelo comando 'git clone' e podem ser facilmente burlados pelo desenvolvedor usando a flag '--no-verify' no commit. Apenas hooks server-side (como pre-receive) conseguem garantir de forma absoluta o bloqueio de commits inseguros na origem. A asserção II é verdadeira: o Gitleaks de fato varre o histórico (`git log -p`) usando entropia de Shannon e Regex para achar credenciais, gerando saídas SARIF."
+    explanation: "Hook local ajuda, mas não garante: o dev pode usar '--no-verify' ou nem ter o hook instalado. É como uma placa de 'não entre', não uma porta trancada. Quem bloqueia de verdade é controle no servidor. Já o Gitleaks realmente procura segredos no histórico usando regras e padrões, como achar uma chave de API esquecida num commit antigo."
   },
   {
     id: 3,
@@ -57,7 +57,7 @@ const examQuestions = [
       { key: "E", text: "I, II e III." }
     ],
     answer: "C",
-    explanation: "A afirmação I está incorreta porque o Fator III (Config) prega que as configurações de ambiente devem ser estritamente armazenadas em variáveis de ambiente, NUNCA em arquivos dentro do repositório (mesmo que específicos por branch ou ambiente). O teste definitivo do Fator III é: 'Eu posso tornar o repositório público neste momento sem vazar nenhuma credencial?'. As afirmações II e III representam exatamente a essência dos fatores V e X."
+    explanation: "Configuração não deve ficar no código. Regra fácil: se abrir o repositório no GitHub vaza senha, está errado. Twelve-Factor manda usar variáveis de ambiente. Build, Release e Run são etapas separadas: primeiro gera o pacote, depois combina com config, depois executa. Dev/prod parity é fazer desenvolvimento e produção parecerem o máximo possível, como usar o mesmo banco via container."
   },
   {
     id: 4,
@@ -73,7 +73,7 @@ const examQuestions = [
       { key: "E", text: "A regra de ouro dos 50% de SRE estipula que a equipe de engenharia deve dedicar no mínimo 50% do seu tempo ao trabalho operacional manual reativo de plantão (on-call) para manter o sistema operacional." }
     ],
     answer: "D",
-    explanation: "O SLO deve ser mais rígido que o SLA (ex: SLO de 99.9% vs SLA de 99.5%) para servir de alerta e contenção interna antes do estouro do contrato financeiro (SLA). A alternativa A está incorreta (inverte a relação). A B está incorreta (se há budget de erro, pode-se lançar features; se esgota, os deploys param). A C está incorreta (usar fila de tickets ou Jira não descaracteriza Toil; continua sendo toil, apenas organizado). A E está incorreta (o trabalho operacional não deve passar de 50%, liberando o resto para projetos e automação)."
+    explanation: "SLO é meta interna; SLA é promessa para cliente. Então o SLO precisa ser mais rígido, como avisar quando o tanque chega na reserva antes do carro parar. Error budget é a margem de erro permitida: se ainda tem margem, pode lançar; se acabou, segura deploy. Toil é trabalho manual repetitivo, mesmo que esteja organizado no Jira."
   },
   {
     id: 5,
@@ -93,7 +93,7 @@ const examQuestions = [
       { key: "E", text: "Ambas as asserções são proposições falsas." }
     ],
     answer: "D",
-    explanation: "A asserção I é falsa porque o `TestServer` do ASP.NET Core executa as requisições inteiramente em memória por meio de chamadas diretas de delegate HTTP, SEM usar sockets de rede, interfaces de loopback (localhost) ou portas TCP físicas do sistema. A asserção II é verdadeira, detalhando fielmente a definição de Martin Fowler sobre testes de integração amplos (broad) vs estreitos (narrow) e o conselho de migração."
+    explanation: "TestServer não abre porta real nem usa localhost; ele simula a chamada HTTP em memória. Pense como ensaiar uma ligação dentro do próprio app, sem sair para a internet. Fowler separa testes amplos, que usam vários serviços reais e ficam lentos/frágeis, de testes estreitos, que testam fronteiras com mocks ou stubs."
   },
   {
     id: 6,
@@ -110,7 +110,7 @@ const examQuestions = [
       { key: "E", text: "Máximo de 26 arestas; e 7 faces." }
     ],
     answer: "B",
-    explanation: "Para um grafo planar simples conexo com v >= 3, o limite superior de arestas é e <= 3v - 6. Substituindo v = 10, temos e <= 3(10) - 6 = 24 arestas no máximo. Para a segunda parte, usamos a Fórmula de Euler para grafos planares conexos: v - e + f = 2. Substituindo v = 8 e e = 12, temos 8 - 12 + f = 2 => f - 4 = 2 => f = 6 faces. Portanto, 24 arestas e 6 faces (Alternativa B)."
+    explanation: "Para grafo planar simples, decore: máximo de arestas = 3v - 6. Com 10 vértices: 30 - 6 = 24. Para faces, use Euler: v - e + f = 2. Com 8 vértices e 12 arestas: 8 - 12 + f = 2, então f = 6. É como contar regiões num mapa desenhado sem cruzar linhas."
   },
   {
     id: 7,
@@ -130,7 +130,7 @@ const examQuestions = [
       { key: "E", text: "I, II e III." }
     ],
     answer: "B",
-    explanation: "A afirmação I está incorreta porque um circuito euleriano exige que TODOS os vértices tenham grau par. Ter exatamente dois vértices de grau ímpar permite um CAMINHO euleriano (que não fecha em ciclo). A afirmação II está correta: CPP (Euler) é resolvido em tempo polinomial, enquanto TSP (Hamilton) é NP-difícil. A afirmação III está incorreta: o Teorema de Dirac diz que um grafo simples com n >= 3 é hamiltoniano se seu grau mínimo δ(G) >= n/2 (nada tem a ver com graus pares ou planaridade)."
+    explanation: "Euler olha para arestas; Hamilton olha para vértices. Para circuito euleriano, todos os graus precisam ser pares. Se só dois são ímpares, dá caminho aberto, não circuito. Carteiro Chinês é problema de arestas e tem solução eficiente. Caixeiro Viajante é de visitar vértices com menor custo e é difícil. Dirac pede grau mínimo >= n/2, não grau par nem planaridade."
   },
   {
     id: 8,
@@ -150,7 +150,7 @@ const examQuestions = [
       { key: "E", text: "I, II e III." }
     ],
     answer: "D",
-    explanation: "A afirmação I está correta: o subconjunto S={2,3} tem apenas {x} como vizinho comum, gerando um gargalo que viola a condição de Hall, logo não há matching que cubra A. A afirmação II está incorreta porque o Teorema de Berge diz que M é máximo se, e somente se, NÃO existe caminho M-aumentante. A afirmação III é um corolário clássico do Teorema de Hall aplicado a grafos bipartidos regulares."
+    explanation: "Hall é regra de vaga: todo grupo de tarefas precisa ter pelo menos o mesmo número de processadores possíveis. Aqui as tarefas 2 e 3 só podem ir para x; duas pessoas disputando uma única cadeira. Não dá matching perfeito. Berge diz o contrário da pegadinha: se ainda existe caminho aumentante, o matching ainda pode melhorar. Bipartido k-regular sempre consegue emparelhar perfeitamente."
   },
   {
     id: 9,
@@ -170,7 +170,7 @@ const examQuestions = [
       { key: "E", text: "Ambas as asserções são proposições falsas." }
     ],
     answer: "A",
-    explanation: "Ambas as asserções são verdadeiras e a II justifica perfeitamente a I. A proposta do diretor mistura os domínios do ERP (back-office, conformidade interna, RH) com o CRM (relacionamento externo, funil, segmentação). O ERP e o CRM devem operar integrados em processos de intersecção como faturamento, pedidos e clientes (dados mestres), mantendo a separação coerente de suas responsabilidades centrais."
+    explanation: "ERP cuida da casa por dentro: estoque, financeiro, RH, folha. CRM cuida do cliente: vendas, relacionamento e campanhas. Colocar campanha de cliente no RH ou folha de funcionário no CRM mistura domínios. Eles se integram, sim, mas cada um continua dono do seu assunto, como cozinha e salão num restaurante."
   },
   {
     id: 10,
@@ -190,7 +190,7 @@ const examQuestions = [
       { key: "E", text: "I, II e III." }
     ],
     answer: "B",
-    explanation: "A afirmação I está incorreta porque o DMAIC é para melhorar processos EXISTENTES; para projetar processos NOVOS do zero usa-se o DMADV (ou DFSS). A afirmação II está correta: a fase Control serve exatamente para sustentar ganhos e evitar o 'efeito sanfona'. A afirmação III está incorreta (outra pegadinha clássica): na filosofia Lean, o pior dos 7 desperdícios é a Superprodução (Overproduction), pois ela gera e esconde todos os outros desperdícios (inventário, transporte, espera, etc.)."
+    explanation: "DMAIC melhora processo que já existe. Para criar processo novo, pense em DMADV. A fase Control é para não deixar a melhoria sumir, como manter dieta com balança e rotina. No Lean, o pior desperdício é superprodução, porque produzir demais cria estoque, espera, transporte e retrabalho."
   },
   {
     id: 11,
@@ -210,7 +210,7 @@ const examQuestions = [
       { key: "E", text: "I, II e III." }
     ],
     answer: "E",
-    explanation: "Todas as afirmações estão corretas. A afirmação I define perfeitamente elisão (legal/planejada) vs evasão (sonegação ilegal). A afirmação II descreve corretamente a cumulatividade típica do ISS e a não-cumulatividade creditável do ICMS e IPI. A afirmação III retrata a regressividade fiscal do modelo tributário brasileiro focado no consumo."
+    explanation: "Elisão é pagar menos imposto dentro da lei, planejando antes. Evasão é sonegar depois, fora da lei. ISS costuma ser cumulativo; ICMS e IPI geram créditos em etapas da cadeia. Imposto sobre consumo é regressivo porque pesa mais no pobre: R$ 5 de imposto no arroz doem mais para quem ganha pouco."
   },
   {
     id: 12,
@@ -230,7 +230,7 @@ const examQuestions = [
       { key: "E", text: "I, II e III." }
     ],
     answer: "C",
-    explanation: "A afirmação I está incorreta: a SLU (Sociedade Limitada Unipessoal) NÃO exige capital mínimo (a EIRELI exigia 100 salários mínimos, o que motivou sua extinção por tornar o processo restritivo). As afirmações II e III definem perfeitamente os termos típicos do ecossistema de startups (Vesting/Cliff e cláusulas de saída Drag Along e Tag Along)."
+    explanation: "SLU não exige capital mínimo; quem tinha regra de 100 salários era a antiga EIRELI. Cliff é o período mínimo antes de ganhar participação: se sair antes de 1 ano, não leva quotas. Drag Along é o majoritário puxar os minoritários na venda, nas mesmas condições, para facilitar vender a empresa inteira."
   },
   {
     id: 13,
@@ -246,7 +246,7 @@ const examQuestions = [
       { key: "E", text: "A falta de adoção da biblioteca de componentes deve ser resolvida alterando o modelo de alocação de DesignOps para centralizado puro, pois o modelo embedded (embutido) elimina o risco de inconsistências visuais e técnicas nos produtos." }
     ],
     answer: "C",
-    explanation: "A alternativa C retrata fielmente a filosofia de Jeremy Keith: o Design System é a 'coisa' (desafio técnico) e o DesignOps é a 'prática' de governança e adoção (desafio essencialmente cultural de processos e pessoas). A alternativa A inverte a relação técnico/cultural de Keith. A alternativa B está incorreta porque Thiago Hassu teoriza uma dependência assimétrica: DesignOps pode existir sem Design System (otimizando processos, skills e ferramentas gerais do design), mas o Design System NÃO sobrevive sem DesignOps (vira um artefato morto/sem adoção)."
+    explanation: "Design System é a biblioteca: componentes, tokens e padrões. DesignOps é fazer as pessoas usarem bem isso no dia a dia. Exemplo: ter um Figma lindo não resolve se cada time cria botão do zero. Keith trata Design System como a 'coisa' técnica e DesignOps como a prática cultural de adoção. DesignOps pode existir sem Design System, mas Design System sem DesignOps vira arquivo esquecido."
   },
   {
     id: 14,
@@ -266,7 +266,7 @@ const examQuestions = [
       { key: "E", text: "I, II e III." }
     ],
     answer: "A",
-    explanation: "Apenas a afirmação I está correta. A afirmação II está incorreta porque o REACH não é uma métrica única, mas sim uma estrutura de triangulação de 5 dimensões que não busca provar causalidade absoluta (pois há variáveis isoladas difíceis de controlar), mas sim identificar tendências de maturidade operacional. A afirmação III está incorreta porque os playbooks diferenciam 'speed' de 'velocity': 'speed' é apenas velocidade bruta; 'velocity' é velocidade com direção correta (alinhamento estratégico), sendo a 'velocity' o foco prioritário."
+    explanation: "REACH não é uma nota mágica que prova lucro direto. É um jeito de olhar várias dimensões do DesignOps. Efficiency pergunta se o designer está fazendo trabalho de alto valor ou perdendo tempo com burocracia e retrabalho. Speed é só ir rápido; velocity é ir rápido na direção certa. Um time pode correr muito e ainda assim entregar a coisa errada."
   },
   {
     id: 15,
@@ -286,7 +286,250 @@ const examQuestions = [
       { key: "E", text: "Ambas as asserções são proposições falsas." }
     ],
     answer: "D",
-    explanation: "A asserção I é falsa porque táticas 'hard' (Pressão, Legitimação) geram no máximo conformidade ou resistência aberta, ativando uma resposta de ameaça social no cérebro. Carlos deve focar em táticas 'soft' (Consulta, Colaboração, Persuasão Racional). A asserção II é verdadeira e baseada na neurociência do modelo SCARF de David Rock, detalhando como as ameaças sociais afetam o córtex pré-frontal e estimulam o comportamento defensivo do Sistema 1."
+    explanation: "Pressão e autoridade até podem fazer alguém obedecer, mas raramente geram adesão real. É como mandar o time usar uma ferramenta nova sem ouvir ninguém: eles resistem ou usam mal. Para mudança cultural, funcionam melhor consulta, colaboração e explicação racional. O modelo SCARF ajuda a lembrar: quando a pessoa se sente ameaçada em status, autonomia ou justiça, ela fica defensiva."
+  }
+];
+
+const examQuestionsV2 = [
+  {
+    id: 1,
+    axis: "Computação",
+    theme: "C4, Deployables & Imagens Docker",
+    context: "Um time desenhou uma arquitetura C4 e marcou uma API, um banco Postgres e uma aplicação web como 'containers'. Um desenvolvedor reclamou dizendo que só a API empacotada em Docker poderia receber esse nome.",
+    question: "Sobre C4 e Docker, assinale a alternativa correta:",
+    options: [
+      { key: "A", text: "No C4, container sempre significa container Docker." },
+      { key: "B", text: "Banco de dados não pode aparecer como container no C4." },
+      { key: "C", text: "No C4, container é uma unidade executável ou deployável do sistema, não necessariamente Docker." },
+      { key: "D", text: "Multi-stage build serve apenas para acelerar testes locais." },
+      { key: "E", text: "Copiar todo o código antes de instalar dependências sempre melhora o cache do Docker." }
+    ],
+    answer: "C",
+    explanation: "Decore: C4 container é 'pedaço que roda', não 'Docker'. Pode ser API, banco, app web ou mobile. Docker é outra coisa. Exemplo curto: no mapa C4, Postgres pode ser container mesmo rodando fora de Docker."
+  },
+  {
+    id: 2,
+    axis: "Computação",
+    theme: "Segredos, Hooks & Defesa em Camadas",
+    context: "Uma equipe colocou Gitleaks no pre-commit local e removeu qualquer validação no servidor, alegando que agora é impossível subir segredo para o repositório.",
+    question: "Qual é o erro principal dessa decisão?",
+    options: [
+      { key: "A", text: "Gitleaks só funciona depois do deploy em produção." },
+      { key: "B", text: "Hook local pode ser pulado ou nem estar instalado; validação crítica deve existir também no servidor/CI." },
+      { key: "C", text: "Segredos em Git não representam risco se estiverem em branch privada." },
+      { key: "D", text: "Pre-commit local é mais forte que pre-receive server-side." },
+      { key: "E", text: "Entropia de Shannon impede qualquer falso positivo." }
+    ],
+    answer: "B",
+    explanation: "Hook local é lembrete, não cadeado. O dev pode usar '--no-verify' ou estar sem o hook. Para prova, pense em defesa em camadas: local ajuda, CI/servidor bloqueia. Exemplo: cinto de segurança ajuda, mas freio do carro continua obrigatório."
+  },
+  {
+    id: 3,
+    axis: "Computação",
+    theme: "12-Factor App",
+    context: "Uma aplicação guarda DATABASE_PASSWORD em config.production.json dentro do repositório privado. O time argumenta que está seguro porque o GitHub é privado.",
+    question: "Pelo Twelve-Factor App, qual prática está correta?",
+    options: [
+      { key: "A", text: "Manter config por ambiente no repositório é recomendado." },
+      { key: "B", text: "Credenciais podem ficar no código se o repositório for privado." },
+      { key: "C", text: "Config que varia entre ambientes deve ficar em variáveis de ambiente ou mecanismo externo equivalente." },
+      { key: "D", text: "Build e Run devem ser misturados para facilitar rollback." },
+      { key: "E", text: "Produção deve usar ferramentas diferentes de desenvolvimento para evitar dependência local." }
+    ],
+    answer: "C",
+    explanation: "Regra de bolso: se publicar o repo vaza senha, está errado. Config vai fora do código, normalmente em env vars. Exemplo: URL do banco muda entre dev e prod; o código não deveria mudar por causa disso."
+  },
+  {
+    id: 4,
+    axis: "Computação",
+    theme: "SRE, SLO & Error Budget",
+    context: "Um serviço tem SLA externo de 99,5%. O time quer definir SLO interno de 99,0% para reduzir alertas.",
+    question: "Qual análise está correta?",
+    options: [
+      { key: "A", text: "O SLO interno deveria ser mais rígido que o SLA, para agir antes de violar contrato." },
+      { key: "B", text: "SLO deve ser sempre menor que SLA." },
+      { key: "C", text: "Error budget é usado apenas para calcular multa contratual." },
+      { key: "D", text: "Se sobra error budget, deploys devem ser proibidos." },
+      { key: "E", text: "Toil deixa de ser toil quando é registrado em ticket." }
+    ],
+    answer: "A",
+    explanation: "SLO é alarme interno; SLA é promessa externa. O alarme toca antes do prejuízo. Exemplo: se o contrato aceita 99,5%, o time pode mirar 99,9% para corrigir antes de pagar multa."
+  },
+  {
+    id: 5,
+    axis: "Computação",
+    theme: "Testes & Pirâmide",
+    context: "Um projeto tem poucos testes unitários e muitos testes end-to-end lentos, que quebram por instabilidade de rede e dados externos.",
+    question: "Que diagnóstico combina melhor com a pirâmide de testes?",
+    options: [
+      { key: "A", text: "A suíte está saudável, pois testes end-to-end devem ser a maioria." },
+      { key: "B", text: "A suíte lembra uma pirâmide invertida: muitos testes caros no topo e poucos baratos na base." },
+      { key: "C", text: "Testes unitários são sempre inúteis em APIs." },
+      { key: "D", text: "Mocks tornam qualquer teste amplo mais realista." },
+      { key: "E", text: "Testes lentos são melhores porque simulam produção com mais fidelidade." }
+    ],
+    answer: "B",
+    explanation: "Pirâmide boa tem muitos testes baratos e rápidos na base. Muitos E2E lentos viram 'casquinha de sorvete': parece cobertura, mas quebra fácil. Exemplo: testar regra de desconto não precisa abrir navegador e chamar banco real."
+  },
+  {
+    id: 6,
+    axis: "Matemática",
+    theme: "Grafos Planares",
+    context: "Um grafo planar simples conexo tem 12 vértices. Depois, outro grafo planar conexo tem 9 vértices e 15 arestas.",
+    question: "Qual é o máximo de arestas do primeiro grafo e quantas faces tem o segundo?",
+    options: [
+      { key: "A", text: "30 arestas e 8 faces." },
+      { key: "B", text: "30 arestas e 7 faces." },
+      { key: "C", text: "36 arestas e 8 faces." },
+      { key: "D", text: "24 arestas e 6 faces." },
+      { key: "E", text: "32 arestas e 9 faces." }
+    ],
+    answer: "A",
+    explanation: "Duas fórmulas para decorar: máximo planar simples = 3v - 6; Euler = v - e + f = 2. Com 12 vértices: 36 - 6 = 30. Com 9 e 15: 9 - 15 + f = 2, então f = 8."
+  },
+  {
+    id: 7,
+    axis: "Matemática",
+    theme: "Euler vs Hamilton",
+    context: "Um fiscal precisa passar por todas as ruas de um bairro sem repetir rua. Outro precisa visitar todas as casas uma vez e voltar ao início.",
+    question: "Qual associação está correta?",
+    options: [
+      { key: "A", text: "Ruas são Hamilton; casas são Euler." },
+      { key: "B", text: "Ruas são Euler; casas são Hamilton." },
+      { key: "C", text: "Ambos são sempre problemas polinomiais fáceis." },
+      { key: "D", text: "Euler exige visitar cada vértice exatamente uma vez." },
+      { key: "E", text: "Hamilton exige usar cada aresta exatamente uma vez." }
+    ],
+    answer: "B",
+    explanation: "Euler = arestas. Hamilton = vértices. Rua é aresta; casa é vértice. Exemplo de memória: 'Euler entrega carta passando pelas ruas'; 'Hamilton visita lugares'."
+  },
+  {
+    id: 8,
+    axis: "Matemática",
+    theme: "Matching & Hall",
+    context: "Três alunos precisam escolher três temas. Ana aceita T1 ou T2; Bruno aceita T1; Carla aceita T1. Cada tema só pode ficar com um aluno.",
+    question: "O que o Teorema de Hall indica?",
+    options: [
+      { key: "A", text: "Existe alocação perfeita porque há três alunos e três temas." },
+      { key: "B", text: "Não existe alocação perfeita, pois Bruno e Carla dependem do mesmo único tema T1." },
+      { key: "C", text: "Hall só vale para grafos não bipartidos." },
+      { key: "D", text: "Basta Ana aceitar dois temas para garantir matching perfeito." },
+      { key: "E", text: "Todo matching inicial já é máximo." }
+    ],
+    answer: "B",
+    explanation: "Hall pergunta: cada grupo tem opções suficientes? Bruno e Carla juntos têm só uma opção: T1. Duas pessoas, uma cadeira. Não fecha matching perfeito."
+  },
+  {
+    id: 9,
+    axis: "Negócios",
+    theme: "ERP vs CRM",
+    context: "Uma empresa quer guardar dados de campanha de marketing no módulo de folha de pagamento e registrar férias de funcionários no CRM.",
+    question: "Qual princípio está sendo violado?",
+    options: [
+      { key: "A", text: "Separação de responsabilidades entre sistemas de back-office e relacionamento com cliente." },
+      { key: "B", text: "Todo dado deve ficar no CRM." },
+      { key: "C", text: "ERP só serve para vendas." },
+      { key: "D", text: "CRM substitui contabilidade e RH." },
+      { key: "E", text: "Integração entre sistemas deve ser sempre evitada." }
+    ],
+    answer: "A",
+    explanation: "ERP cuida do operacional interno; CRM cuida do cliente. Eles conversam, mas não trocam de profissão. Exemplo: CRM sabe que o cliente comprou; ERP emite nota, controla estoque e financeiro."
+  },
+  {
+    id: 10,
+    axis: "Negócios",
+    theme: "Lean Seis Sigma",
+    context: "Uma equipe quer desenhar do zero um processo de onboarding que nunca existiu. Outra quer reduzir erro num processo de suporte já em operação.",
+    question: "Qual combinação está correta?",
+    options: [
+      { key: "A", text: "DMAIC para processo novo; DMADV para processo existente." },
+      { key: "B", text: "DMADV para processo novo; DMAIC para melhorar processo existente." },
+      { key: "C", text: "DMAIC e DMADV são nomes diferentes para a mesma coisa." },
+      { key: "D", text: "Control é a etapa de criação inicial do processo." },
+      { key: "E", text: "Lean considera defeito o desperdício que gera todos os outros." }
+    ],
+    answer: "B",
+    explanation: "DMAIC melhora o que já existe. DMADV desenha algo novo. Exemplo: consertar fila lenta do suporte = DMAIC; criar onboarding do zero = DMADV."
+  },
+  {
+    id: 11,
+    axis: "Negócios",
+    theme: "Tributos",
+    context: "Uma loja escolhe legalmente um regime tributário antes de vender. Outra vende e depois esconde notas para pagar menos.",
+    question: "Como classificar os dois casos?",
+    options: [
+      { key: "A", text: "Ambos são evasão fiscal." },
+      { key: "B", text: "O primeiro é elisão; o segundo é evasão." },
+      { key: "C", text: "O primeiro é evasão; o segundo é elisão." },
+      { key: "D", text: "Ambos são elisão fiscal." },
+      { key: "E", text: "Nenhum tem relação com tributação." }
+    ],
+    answer: "B",
+    explanation: "Elisão é planejamento legal antes do fato gerador. Evasão é fraude/sonegação. Exemplo simples: escolher Simples Nacional quando permitido é elisão; esconder venda é evasão."
+  },
+  {
+    id: 12,
+    axis: "Negócios",
+    theme: "Startups, Vesting & Saída",
+    context: "Um cofundador tem vesting de 4 anos com cliff de 1 ano e sai depois de 8 meses. O contrato também tem Drag Along.",
+    question: "Qual conclusão está correta?",
+    options: [
+      { key: "A", text: "Ele recebe 8 meses proporcionais de quotas." },
+      { key: "B", text: "Ele não recebe quotas por sair antes do cliff; Drag Along permite puxar minoritários numa venda." },
+      { key: "C", text: "Cliff significa direito imediato a todas as quotas." },
+      { key: "D", text: "Drag Along protege apenas o comprador minoritário." },
+      { key: "E", text: "Vesting elimina a necessidade de acordo de sócios." }
+    ],
+    answer: "B",
+    explanation: "Cliff é carência. Saiu antes de 1 ano, não levou participação. Drag Along é o majoritário puxar os minoritários para vender junto, nas mesmas condições. Exemplo: facilita vender 100% da startup."
+  },
+  {
+    id: 13,
+    axis: "UX/DesignOps",
+    theme: "Design System & Adoção",
+    context: "A empresa tem biblioteca React e Figma completa, mas os squads continuam criando componentes próprios porque não sabem quem mantém o sistema nem quando devem contribuir.",
+    question: "Qual problema aparece com mais força?",
+    options: [
+      { key: "A", text: "Falta apenas trocar a cor dos componentes." },
+      { key: "B", text: "Falta DesignOps: governança, adoção, processos e manutenção." },
+      { key: "C", text: "Design System dispensa documentação." },
+      { key: "D", text: "Componentes duplicados são sinal de maturidade." },
+      { key: "E", text: "A solução é proibir design em todos os squads." }
+    ],
+    answer: "B",
+    explanation: "Design System não é só biblioteca bonita. Precisa de processo: quem mantém, como contribuir, como adotar. Exemplo: se cada time cria seu botão, o problema não é só técnico; é operação e cultura."
+  },
+  {
+    id: 14,
+    axis: "UX/DesignOps",
+    theme: "REACH & Playbooks",
+    context: "Um time mede DesignOps apenas por quantidade de telas entregues por semana, sem avaliar retrabalho, clareza de papéis ou alinhamento com estratégia.",
+    question: "Qual crítica está correta?",
+    options: [
+      { key: "A", text: "Quantidade de telas é suficiente para medir DesignOps." },
+      { key: "B", text: "REACH olha dimensões mais amplas; velocidade sem direção não garante valor." },
+      { key: "C", text: "Velocity e speed são exatamente iguais." },
+      { key: "D", text: "Playbook deve ignorar tomada de decisão." },
+      { key: "E", text: "Eficiência significa fazer mais reuniões." }
+    ],
+    answer: "B",
+    explanation: "Speed é correr. Velocity é correr na direção certa. REACH ajuda a olhar eficiência, adoção e saúde operacional, não só volume. Exemplo: entregar 20 telas erradas é rápido, mas não é bom."
+  },
+  {
+    id: 15,
+    axis: "Liderança",
+    theme: "SCARF & Influência",
+    context: "Uma gerente quer implantar code review obrigatório. Ela anuncia: 'A partir de amanhã, quem reclamar terá avaliação negativa'.",
+    question: "Qual leitura é mais adequada pelo SCARF e por táticas de influência?",
+    options: [
+      { key: "A", text: "A pressão aumenta autonomia e justiça percebida." },
+      { key: "B", text: "A ameaça tende a gerar defesa; consulta e explicação racional aumentariam compromisso." },
+      { key: "C", text: "Táticas hard sempre geram comprometimento real." },
+      { key: "D", text: "SCARF só se aplica a decisões financeiras." },
+      { key: "E", text: "Status e autonomia não afetam times técnicos." }
+    ],
+    answer: "B",
+    explanation: "Ameaça ativa defesa. Para mudança de hábito, melhor explicar o motivo, ouvir objeções e combinar experimento. Exemplo: 'vamos testar code review por 30 dias para reduzir bug em produção' gera mais adesão que punição."
   }
 ];
 
@@ -314,5 +557,32 @@ const essayQuestions = [
                      "2. Correção da instabilidade de deploy: Implementar pipeline automatizada de CI/CD contendo testes unitários e de integração estreitos. Utilizar Feature Flags para desacoplar deploy de release, e implantar deploys progressivos (Canary) no Kubernetes.\n" +
                      "3. Redução do tempo de busca de erros (35%): Implementar Observabilidade completa baseada nos três pilares (Logs estruturados, Métricas de saúde/infraestrutura e Traces distribuídos) via OpenTelemetry, integrando com Prometheus/Grafana ou APM para alertas proativos antes da queima de SLOs.\n" +
                      "4. Segurança de Cloud e custos: Implementar gerenciamento rígido de identidade e acesso (IAM) seguindo a política de menor privilégio. Roda varreduras automáticas de chaves com ferramentas como Gitleaks nos repositórios, implantar auditorias e configurar controle financeiro com orçamentos (ex: AWS Budgets)."
+  }
+];
+
+const essayQuestionsV2 = [
+  {
+    id: 1,
+    axis: "Computação",
+    theme: "Segurança, CI/CD e Configuração",
+    context: "Uma healthtech percebeu que seus deploys ficaram rápidos, mas inseguros: variáveis sensíveis aparecem em arquivos versionados, os scans de segredo rodam apenas no computador de alguns desenvolvedores e a imagem Docker final contém SDKs, ferramentas de build e dependências de desenvolvimento.",
+    prompt: "Explique um plano curto para corrigir esses problemas usando 12-Factor App, validações de segurança no pipeline e Docker multi-stage.",
+    referenceAnswer: "Resposta esperada:\n" +
+                     "1. Remover segredos do repositório e usar variáveis de ambiente ou secret manager. Regra simples: o repo poderia ser público sem vazar senha.\n" +
+                     "2. Manter hooks locais como ajuda, mas colocar Gitleaks/scan de segredo também no CI ou no servidor, porque hook local pode ser pulado.\n" +
+                     "3. Usar Docker multi-stage: primeiro estágio compila/testa com SDK; imagem final leva só runtime e artefatos necessários.\n" +
+                     "4. Separar Build, Release e Run: build gera artefato imutável; release combina artefato com config; run apenas executa."
+  },
+  {
+    id: 2,
+    axis: "Negócios, UX & Liderança",
+    theme: "Adoção de Processos",
+    context: "Uma empresa criou um Design System e um novo processo de code review, mas os times resistem. Cada squad continua criando componentes próprios, e a liderança tenta resolver com cobrança diária e ameaças de avaliação negativa.",
+    prompt: "Proponha uma resposta usando DesignOps, REACH/Playbooks e SCARF para aumentar adoção real sem depender de pressão.",
+    referenceAnswer: "Resposta esperada:\n" +
+                     "1. Tratar o Design System como produto interno: definir dono, processo de contribuição, documentação viva e rotina de suporte.\n" +
+                     "2. Usar DesignOps para governança e adoção, não só para criar biblioteca. Exemplo: combinar como squads pedem ou alteram componentes.\n" +
+                     "3. Medir com visão REACH: menos retrabalho, mais eficiência, clareza de papéis e adoção real; não só número de telas entregues.\n" +
+                     "4. Pela lógica SCARF, evitar ameaça a autonomia e justiça. Melhor propor experimento curto, explicar benefício e ouvir objeções."
   }
 ];

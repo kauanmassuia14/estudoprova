@@ -17,6 +17,11 @@
       <p>Simulado avançado e de alta dificuldade no formato ENADE. Desenvolvido para revisar de forma exaustiva os conceitos fundamentais dos módulos 1 a 6.</p>
     </header>
 
+    <section class="version-switcher" aria-label="Selecionar versão da prova">
+      <button id="version-v1" class="version-btn active" onclick="switchExamVersion('v1')">V1 Revisão</button>
+      <button id="version-v2" class="version-btn" onclick="switchExamVersion('v2')">V2 Aprofundamento</button>
+    </section>
+
     <!-- Results Dashboard (Hidden by default, shown after submit) -->
     <section id="results-dashboard" class="results-dashboard">
       <div class="results-grid">
@@ -100,6 +105,9 @@
     let examSubmitted = false;
     let secondsElapsed = 0;
     let timerInterval = null;
+    let activeVersion = 'v1';
+    let activeExamQuestions = examQuestions;
+    let activeEssayQuestions = essayQuestions;
 
     // Initialize application on window load
     window.onload = function() {
@@ -124,13 +132,18 @@
       return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
     }
 
+    function getAxisClass(axis) {
+      return axis.toLowerCase().split('/')[0];
+    }
+
     // Render Questions dynamically
     function renderQuestions() {
       // 1. Objective Questions
       const objContainer = document.getElementById('objective-questions');
       objContainer.innerHTML = '';
       
-      examQuestions.forEach((q, index) => {
+      activeExamQuestions.forEach((q, index) => {
+        const correctAnswer = q.options.find(opt => opt.key === q.answer);
         const card = document.createElement('article');
         card.className = 'question-card';
         card.id = `q-card-${q.id}`;
@@ -138,7 +151,7 @@
         card.innerHTML = `
           <div class="card-header">
             <span class="question-number">Questão ${index + 1}</span>
-            <span class="axis-badge ${q.axis.toLowerCase()}">${q.axis} — ${q.theme}</span>
+            <span class="axis-badge ${getAxisClass(q.axis)}">${q.axis} — ${q.theme}</span>
           </div>
           <p class="context-text">${q.context}</p>
           <p class="question-text">${q.question}</p>
@@ -150,6 +163,13 @@
                 <div class="option-text"><strong>${opt.key})</strong> ${opt.text}</div>
               </label>
             `).join('')}
+          </div>
+          <button class="answer-toggle-btn" id="answer-toggle-${q.id}" onclick="toggleAnswerReveal(${q.id})">
+            Ver resposta e explicação
+          </button>
+          <div class="answer-reveal" id="answer-reveal-${q.id}">
+            <p><strong>Resposta correta:</strong> ${correctAnswer ? `${correctAnswer.key}) ${correctAnswer.text}` : q.answer}</p>
+            <p><strong>Por que?</strong> ${q.explanation}</p>
           </div>
           <div class="explanation-block" id="explanation-${q.id}">
             <div class="explanation-title" id="explanation-title-${q.id}"></div>
@@ -163,7 +183,7 @@
       const essayContainer = document.getElementById('essay-questions-container');
       essayContainer.innerHTML = '';
 
-      essayQuestions.forEach((q, index) => {
+      activeEssayQuestions.forEach((q, index) => {
         const card = document.createElement('article');
         card.className = 'question-card essay-card';
         card.id = `essay-card-${q.id}`;
@@ -176,8 +196,8 @@
           <p class="context-text">${q.context}</p>
           <p class="question-text">${q.prompt}</p>
           <textarea class="essay-textarea" id="essay-input-${q.id}" placeholder="Escreva aqui seu rascunho de resposta para fins de estudo..."></textarea>
-          <button class="essay-toggle-btn" id="essay-toggle-${q.id}" onclick="toggleEssayReference(${q.id})" disabled>
-            Ver Resposta de Referência (Liberada após enviar)
+          <button class="essay-toggle-btn" id="essay-toggle-${q.id}" onclick="toggleEssayReference(${q.id})">
+            Ver Resposta de Referência
           </button>
           <div class="essay-reference" id="essay-ref-${q.id}">
             <strong>Resposta Esperada / Padrão de Resposta:</strong><br><br>
@@ -214,7 +234,7 @@
     // Update Progress Bar status
     function updateProgressBar() {
       const answeredCount = Object.keys(userAnswers).length;
-      const totalCount = examQuestions.length;
+      const totalCount = activeExamQuestions.length;
       const percent = (answeredCount / totalCount) * 100;
       
       document.getElementById('progress-bar-fill').style.width = `${percent}%`;
@@ -231,7 +251,7 @@
 
     // Submit and check exam
     function submitExam() {
-      if (Object.keys(userAnswers).length < examQuestions.length) return;
+      if (Object.keys(userAnswers).length < activeExamQuestions.length) return;
       
       examSubmitted = true;
       clearInterval(timerInterval);
@@ -240,10 +260,10 @@
       document.getElementById('sticky-progress').style.transform = 'translateY(100%)';
 
       let correctCount = 0;
-      const totalCount = examQuestions.length;
+      const totalCount = activeExamQuestions.length;
 
       // Evaluate objective questions
-      examQuestions.forEach(q => {
+      activeExamQuestions.forEach(q => {
         const userChoice = userAnswers[q.id];
         const correctChoice = q.answer;
         const explanationBlock = document.getElementById(`explanation-${q.id}`);
@@ -276,10 +296,9 @@
       });
 
       // Enable essay answers reference reveal buttons
-      essayQuestions.forEach(q => {
+      activeEssayQuestions.forEach(q => {
         const toggleBtn = document.getElementById(`essay-toggle-${q.id}`);
         if (toggleBtn) {
-          toggleBtn.removeAttribute('disabled');
           toggleBtn.innerText = "Ver Resposta de Referência";
         }
         const textarea = document.getElementById(`essay-input-${q.id}`);
@@ -315,6 +334,43 @@
       }
     }
 
+    // Toggle reveal for objective answer
+    function toggleAnswerReveal(id) {
+      const revealDiv = document.getElementById(`answer-reveal-${id}`);
+      const btn = document.getElementById(`answer-toggle-${id}`);
+      
+      if (!revealDiv || !btn) return;
+      
+      if (revealDiv.style.display === 'block') {
+        revealDiv.style.display = 'none';
+        btn.innerText = "Ver resposta e explicação";
+      } else {
+        revealDiv.style.display = 'block';
+        btn.innerText = "Ocultar resposta e explicação";
+      }
+    }
+
+    // Switch between exam versions
+    function switchExamVersion(version) {
+      if (activeVersion === version) return;
+
+      activeVersion = version;
+      activeExamQuestions = version === 'v2' ? examQuestionsV2 : examQuestions;
+      activeEssayQuestions = version === 'v2' ? essayQuestionsV2 : essayQuestions;
+
+      document.getElementById('version-v1').classList.toggle('active', version === 'v1');
+      document.getElementById('version-v2').classList.toggle('active', version === 'v2');
+
+      userAnswers = {};
+      examSubmitted = false;
+      document.getElementById('results-dashboard').style.display = 'none';
+      document.getElementById('sticky-progress').style.transform = 'translateY(0)';
+      renderQuestions();
+      startTimer();
+      updateProgressBar();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
     // Scroll back to the top of the questions container
     function scrollToFirstQuestion() {
       document.getElementById('q-card-1').scrollIntoView({ behavior: 'smooth' });
@@ -333,7 +389,7 @@
       document.getElementById('sticky-progress').style.transform = 'translateY(0)';
       
       // Re-enable objectives controls and clear CSS classes
-      examQuestions.forEach(q => {
+      activeExamQuestions.forEach(q => {
         const explanationBlock = document.getElementById(`explanation-${q.id}`);
         explanationBlock.style.display = 'none';
         explanationBlock.className = 'explanation-block';
@@ -348,14 +404,19 @@
           r.disabled = false;
           r.checked = false;
         });
+
+        const answerReveal = document.getElementById(`answer-reveal-${q.id}`);
+        if (answerReveal) answerReveal.style.display = 'none';
+
+        const answerBtn = document.getElementById(`answer-toggle-${q.id}`);
+        if (answerBtn) answerBtn.innerText = 'Ver resposta e explicação';
       });
 
       // Clear discursivas
-      essayQuestions.forEach(q => {
+      activeEssayQuestions.forEach(q => {
         const toggleBtn = document.getElementById(`essay-toggle-${q.id}`);
         if (toggleBtn) {
-          toggleBtn.setAttribute('disabled', 'true');
-          toggleBtn.innerText = "Ver Resposta de Referência (Liberada após enviar)";
+          toggleBtn.innerText = "Ver Resposta de Referência";
         }
         const refDiv = document.getElementById(`essay-ref-${q.id}`);
         if (refDiv) refDiv.style.display = 'none';
